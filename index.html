@@ -86,11 +86,21 @@
 }).bindPopup(function (layer) {
     return layer.feature.properties.description;
 }).addTo(map);	
+	
 		
+	var outmcg = L.markerClusterGroup({
+		spiderfyOnMaxZoom: false,
+		maxClusterRadius: 80,
+		showCoverageOnHover: false,
+		zoomToBoundsOnClick: true,
+		disableClusteringAtZoom: 13,
+		animate: true
+	}),	
+    KOTOSFG = L.featureGroup.subGroup(outmcg),
 		
 		
 	var overlays = {
-		"КОТОС": KOTOSLG
+		"КОТОС": KOTOSFG
 	};
 		
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);		
