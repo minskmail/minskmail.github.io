@@ -70,7 +70,7 @@
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr}),
 		satellite  = L.tileLayer(mbUrl, {id: 'mapbox.satellite',   attribution: mbAttr});	
 
-	var map = L.map('map',{'messagebox': true, layers: [grayscale]}).setView([53.904961, 27.553263], 7);
+	var map = L.map('map',{'messagebox': true, layers: [streets]}).setView([53.904961, 27.553263], 7);
 
 	var baseLayers = {
 		"Grayscale": grayscale,
