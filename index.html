@@ -96,7 +96,7 @@ outmcg.addTo(map);
 		
 		
 		
-	L.geoJSON(kotos, {
+	var kotosgeo = L.geoJSON(kotos, {
     style: function (feature) {
         return {color: feature.properties.color};
     }
@@ -107,7 +107,7 @@ outmcg.addTo(map);
 		
 		
 	var overlays = {
-		"КОТОС": KOTOSFG
+		"KOTOC": KOTOSFG
 	};
 		
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);		
