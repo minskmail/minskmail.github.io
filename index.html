@@ -91,13 +91,11 @@
 mcluster.addTo(map);
 		
 		
-		
-		
-		
+
 		
 L.geoJSON(kotos, {
     style: function (feature) {
-        return {color: feature.properties.color};
+        return {color: feature.properties.marker-color};
     }
 }).bindPopup(function (layer) {
     return layer.feature.properties.description;
