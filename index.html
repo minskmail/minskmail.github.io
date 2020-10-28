@@ -80,16 +80,15 @@
 	};
 	
 	
-	var outmcg = L.markerClusterGroup({
+	var mcluster = L.markerClusterGroup({
 		spiderfyOnMaxZoom: false,
 		maxClusterRadius: 80,
 		showCoverageOnHover: false,
 		zoomToBoundsOnClick: true,
 		disableClusteringAtZoom: 13,
 		animate: true
-	}),	
-    KOTOSFG = L.featureGroup.subGroup(outmcg);
-outmcg.addTo(map);
+	})
+mcluster.addTo(map);
 		
 		
 		
@@ -102,12 +101,12 @@ outmcg.addTo(map);
     }
 }).bindPopup(function (layer) {
     return layer.feature.properties.description;
-}).addTo(KOTOSFG); 		
+}).addTo(mcluster); 		
 
 		
 		
 	var overlays = {
-		"KOTOC": KOTOSFG
+		"KOTOC": mcluster
 	};
 		
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);		
