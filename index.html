@@ -79,15 +79,7 @@
 		"Satellite": satellite
 	};
 	
-	L.geoJSON(kotos, {
-    style: function (feature) {
-        return {color: feature.properties.color};
-    }
-}).bindPopup(function (layer) {
-    return layer.feature.properties.description;
-}).addTo(map);	
 	
-		
 	var outmcg = L.markerClusterGroup({
 		spiderfyOnMaxZoom: false,
 		maxClusterRadius: 80,
@@ -97,6 +89,22 @@
 		animate: true
 	}),	
     KOTOSFG = L.featureGroup.subGroup(outmcg);
+		
+		
+		
+		
+		
+		
+	L.geoJSON(kotos, {
+    style: function (feature) {
+        return {color: feature.properties.color};
+    }
+}).bindPopup(function (layer) {
+    return layer.feature.properties.description;
+}).addTo(map);	
+	
+		
+
 		
 		
 	var overlays = {
