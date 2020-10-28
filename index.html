@@ -108,7 +108,7 @@ L.geoJSON(kotos, {
 	};
 		
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);		
-		
+L.control.locate({strings: {title: "Show current location", popup: "You are here."}}).addTo(map);		
 		
 		
 		
