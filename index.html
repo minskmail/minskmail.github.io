@@ -110,7 +110,18 @@ L.geoJSON(kotos, {
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);		
 L.control.locate({strings: {title: "Show current location", popup: "You are here."}}).addTo(map);		
 		
-		
+L.control.search({
+		layer: kotos,
+		collapsed: false,
+		initial: false,
+		zoom: 16,
+		firstTipSubmit: true,
+		delayType: 1,
+		propertyName: 'description',
+		textPlaceholder: 'Search...',
+		marker: L.marker([0,0],{icon: L.icon.pulse({iconSize:[10,10],color:'red'})}),
+	})
+	.addTo(map);		
 		
 
 </script>
