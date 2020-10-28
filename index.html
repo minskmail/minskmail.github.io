@@ -27,6 +27,7 @@
 <div id='map'></div>
 
 <!--Datafile-->
+	<script src="kotos.geojson" type="text/javascript"></script>
 	<script src="data/cell.js" type="text/javascript"></script>
 	<script src="data/data.js" type="text/javascript"></script>
 <!--Sector script-->
@@ -78,6 +79,22 @@
 		"Satellite": satellite
 	};
 	
+	L.geoJSON(data, {
+    style: function (feature) {
+        return {color: feature.properties.color};
+    }
+}).bindPopup(function (layer) {
+    return layer.feature.properties.description;
+}).addTo(map);	
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 </script>
 </body>
