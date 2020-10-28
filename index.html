@@ -82,10 +82,10 @@
 	
 	var mcluster = L.markerClusterGroup({
 		spiderfyOnMaxZoom: false,
-		maxClusterRadius: 80,
-		showCoverageOnHover: false,
+		maxClusterRadius: 200,
+		showCoverageOnHover: true,
 		zoomToBoundsOnClick: true,
-		disableClusteringAtZoom: 13,
+		disableClusteringAtZoom: 15,
 		animate: true
 	})
 mcluster.addTo(map);
