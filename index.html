@@ -109,8 +109,9 @@ function getColor(feature) {
 }
 function setStyle(feature) {
     return {
-        fillColor: getColor(feature.properties.marker-color),
-        weight: 1,
+//        fillColor: getColor(feature.properties.marker-color),
+        fillColor: "#fff",
+	weight: 1,
         opacity: 1,
         color: "#000",
         dashArray: '3',
@@ -126,7 +127,7 @@ L.geoJSON(kotos, {
 //			return feature.properties && feature.properties.style;
 //		},
 
-	style: setStyle,
+//	style: setStyle,
 	
 
 	
