@@ -90,14 +90,18 @@
 	})
 mcluster.addTo(map);
 
-	
-		
+function dataFeature(feature, layer) {
+		var popupContent = "<mark>"+"<b>"+feature.properties.description +"</b>"+"</mark>";		
+		layer.bindPopup(popupContent,{closeOnClick: false,autoClose: false});
+		layer.bindTooltip(popupContent,{sticky:true})
+	}	
+
 
 L.geoJSON(kotos, {
 		style: function (feature) {
 			return feature.properties && feature.properties.style;
 		},
-
+		onEachFeature: dataFeature,
 		pointToLayer: function (feature, latlng) {
         return marker = L.marker(latlng)
 		}
