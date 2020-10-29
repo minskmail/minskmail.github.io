@@ -92,7 +92,7 @@
 mcluster.addTo(map);
 
 function dataFeature(feature, layer) {
-		var popupContent = "<mark>"+"<b>"+feature.properties.kotos +"</b>"+"</mark>"+"<br>"+feature.properties.description;
+		var popupContent = "<mark>"+"<b>"+feature.properties.description +"</b>"+"</mark>"+"<br>"+feature.properties.location;
 //		var mcolor = feature.properties.marker-color;
 		layer.bindPopup(popupContent, {closeOnClick: false,autoClose: false});
 //		layer.bindPopup(mcolor, {closeOnClick: false,autoClose: false});
