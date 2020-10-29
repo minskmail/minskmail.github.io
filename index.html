@@ -93,8 +93,8 @@ mcluster.addTo(map);
 function dataFeature(feature, layer) {
 		var popupContent = feature.properties.description;
 		var mcolor = feature.properties.marker-color;
-//		layer.bindPopup(popupContent + mcolor, {closeOnClick: false,autoClose: false});
-		layer.bindPopup(mcolor, {closeOnClick: false,autoClose: false});
+		layer.bindPopup(popupContent, {closeOnClick: false,autoClose: false});
+//		layer.bindPopup(mcolor, {closeOnClick: false,autoClose: false});
 
 		layer.bindTooltip(popupContent,{sticky:true})
 	}	
