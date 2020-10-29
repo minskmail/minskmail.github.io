@@ -97,7 +97,7 @@ L.geoJSON(kotos, {
 		style: function (feature) {
 			return feature.properties && feature.properties.style;
 		},
-		onEachFeature: dataFeature,
+
 		pointToLayer: function (feature, latlng) {
         return marker = L.marker(latlng)
 		}
