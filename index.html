@@ -97,17 +97,12 @@ function dataFeature(feature, layer) {
 	}	
 
 
-//function setStyle(feature) {
-//    return {
-//        fcolor: getColor(feature.properties.marker-color)
-//        fillColor: 'white'
-//	weight: 1,
-//        opacity: 1,
-//        color: "#000",
-//        dashArray: '3',
- //       fillOpacity: 0.8
- //   };
-//}		
+// get color depending on population density value
+	function getColor(d) {
+		return d = "#82cdff" ? "#82cdff" :
+			d = "#595959"  ? "#595959" :
+				;
+	}	
 		
 		
 		
@@ -129,8 +124,8 @@ L.geoJSON(kotos, {
 	return L.circleMarker(latlng, {
 //		style: setStyle
 				radius: 8,
-				fillColor:"#82cdff",
-//				fillColor:feature.properties.marker-color,
+//				fillColor:"#82cdff",
+				fillColor:getColor(feature.properties.marker-color),
 				color: "#000",
 				weight: 1,
 				opacity: 1,
