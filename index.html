@@ -89,21 +89,30 @@
 		animate: true
 	})
 mcluster.addTo(map);
-		
+
+function dataFeature(feature, layer) {
+		let param;
+		default: param = "undef";}
+		var popupContent = "<mark>"+"<b>"+feature.properties.description +"</b>"+"</mark>";		
+		layer.bindPopup(popupContent,{closeOnClick: false,autoClose: false});
+		layer.bindTooltip(popupContent,{sticky:true})
+	}	
 		
 
-		
 L.geoJSON(kotos, {
-    style: function (feature) {
-        return {color: feature.properties.marker-color};
-    }
-}).bindPopup(function (layer) {
-    return layer.feature.properties.description;
-}).addTo(mcluster); 		
+		style: function (feature) {
+			return feature.properties && feature.properties.style;
+		},
+		onEachFeature: dataFeature,
+		pointToLayer: function (feature, latlng) {
+        return marker = L.marker(latlng)
+		}
+	}).addTo(mcluster);
+		
 
 		
 		
-	var overlays = {
+var overlays = {
 		"KOTOC": mcluster
 	};
 		
