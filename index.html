@@ -91,7 +91,7 @@
 mcluster.addTo(map);
 
 function dataFeature(feature, layer) {
-		var popupContent = feature.properties.description + feature.properties['marker-color'];
+		var popupContent = feature.properties.description;
 //		var mcolor = feature.properties.marker-color;
 		layer.bindPopup(popupContent, {closeOnClick: false,autoClose: false});
 //		layer.bindPopup(mcolor, {closeOnClick: false,autoClose: false});
@@ -126,8 +126,8 @@ L.geoJSON(kotos, {
 	return L.circleMarker(latlng, {
 //		style: setStyle
 				radius: 8,
-				fillColor:"#82cdff",
-//				fillColor:getColor,
+//				fillColor:"#82cdff",
+				fillColor:feature.properties['marker-color'],
 				color: "#000",
 				weight: 1,
 				opacity: 1,
