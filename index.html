@@ -98,13 +98,13 @@ function dataFeature(feature, layer) {
 
 
 L.geoJSON(kotos, {
-//		style: function (feature) {
-//			return feature.properties && feature.properties.style;
-//		},
+		style: function (feature) {
+			return feature.properties && feature.properties.style;
+		},
 	
-	style: function (feature) {
-		return {color: feature.properties.marker-color};
-	},
+//	style: function (feature) {
+//		return {color: feature.properties.marker-color};
+//	},
 	
 	
 	
