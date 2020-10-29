@@ -91,7 +91,7 @@
 mcluster.addTo(map);
 
 function dataFeature(feature, layer) {
-		var popupContent = "<mark>"+"<b>"+feature.properties.description +"</b>"+"</mark>";		
+		var popupContent = feature.properties.description;		
 		layer.bindPopup(popupContent,{closeOnClick: false,autoClose: false});
 		layer.bindTooltip(popupContent,{sticky:true})
 	}	
