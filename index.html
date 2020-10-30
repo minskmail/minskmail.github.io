@@ -73,7 +73,7 @@
 	var map = L.map('map',{'messagebox': true, layers: [streets]}).setView([53.904961, 27.553263], 12);
 		
 		map.messagebox.setPosition('bottomright');
-		map.messagebox.options.timeout = 10000;
+		map.messagebox.options.timeout = 60000;
 		map.messagebox.show('BY: Дадзеныя ўзятыя з адкрытых крыніц і могуць утрымліваць недакладнасьці' + "<br>" +'RU: Данные взяты из открытых источников и могут содержать неточности');
 
 	var baseLayers = {
