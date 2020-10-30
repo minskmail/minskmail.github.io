@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 <!--Messagebox-->	
-	<link rel="stylesheet" href="src/messagebox/leaflet-messagebox.css" />-->
+	<link rel="stylesheet" href="src/messagebox/leaflet-messagebox.css" />
 	<script src="src/messagebox/leaflet-messagebox.js"></script>
 <!--Cluster script-->	
 	<script src="src/markercluster/leaflet.markercluster.js"></script>
@@ -147,7 +147,8 @@ var overlays = {
 	};
 		
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);		
-L.control.locate({strings: {title: "Show current location", popup: "You are here."}}).addTo(map);		
+L.control.locate({strings: {title: "Show current location", popup: "You are here."}}).addTo(map);
+L.control.zoomLabel({position:'bottomleft'}).addTo(map);
 		
 L.control.search({
 		layer: mcluster,
