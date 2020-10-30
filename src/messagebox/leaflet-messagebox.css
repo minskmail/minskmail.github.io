@@ -1,0 +1,6 @@
+.leaflet-control-messagebox {
+	display: none; /* Initially hidden */
+/*	border: 2px solid red; */
+	background-color: yellow;
+	padding: 1px 5px;
+}
